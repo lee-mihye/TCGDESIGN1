@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>TCG 디자인 1</title>
+
+        <!-- css -->
+        <link rel="stylesheet" href="css/common.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/jquery-ui.min.css" />
+        <!-- js -->
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/common.js"></script>
+        <script src="js/main.js"></script>
+        <!-- AOS -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+        <!-- font -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;display=swap" rel="stylesheet" />
+        <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css" />
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    </head>
+    <body>
+        <div class="wrap">
+            <header>
+                <div id="header">
+                    <h1 class="logo">
+                        <a href="">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 835.789 242.377">
+                                <path class="cls-1" d="M278.1,464.794H264.755v-8.6H301.41v8.6H287.862v40.232H278.1Z" transform="translate(-264.755 -263.267)" />
+                                <path class="cls-1" d="M303.4,456.2h31.222v8.6H312.964v11.76H330.3v8.459H312.964v11.416h23.107v8.6H303.4Z" transform="translate(-264.755 -263.267)" />
+                                <path class="cls-1" d="M339.373,456.2h9.765v21.113h19.944V456.2h9.7v48.828h-9.7V485.907H349.138v19.119h-9.765Z" transform="translate(-264.755 -263.267)" />
+                                <path class="cls-1" d="M384.213,456.2h31.221v8.6H393.771v11.76H411.1v8.459H393.771v11.416h23.108v8.6H384.213Z" transform="translate(-264.755 -263.267)" />
+                                <path
+                                    class="cls-1"
+                                    d="M420.18,456.2h18.5c11.76,0,16.987,6.877,16.987,16.23,0,7.427-3.439,12.517-10.179,14.717l12.242,17.881H446.245L435.31,488.314h-5.57v16.712h-9.56Zm16.575,23.588c5.914,0,8.94-3.025,8.94-7.5,0-4.538-2.957-7.5-8.528-7.5H429.74v14.992Z"
+                                    transform="translate(-264.755 -263.267)"
+                                />
+                                <path class="cls-1" d="M473.961,456.2h9.352l18.156,48.828H491.36l-3.37-9.766H469.284l-3.3,9.766H455.874Zm11.278,30.81-6.533-19.119h-.138l-6.533,19.119Z" transform="translate(-264.755 -263.267)" />
+                                <path class="cls-1" d="M502.638,456.2h9.491l21.938,32.941h.137V456.2h9.559v48.828h-9.7L512.4,472.772h-.138v32.254h-9.628Z" transform="translate(-264.755 -263.267)" />
+                                <path
+                                    class="cls-1"
+                                    d="M559.787,480.749c0-13.96,8.94-25.17,24.758-25.17A25.038,25.038,0,0,1,604.008,465l-7.153,5.983c-3.164-3.851-7.29-6.19-12.31-6.19-8.322,0-14.648,6.19-14.648,15.955,0,9.078,6.052,15.612,14.785,15.612a15.806,15.806,0,0,0,12.311-6.19l7.083,6.121a24.414,24.414,0,0,1-19.394,9.215C571.066,505.507,559.787,496.842,559.787,480.749Z"
+                                    transform="translate(-264.755 -263.267)"
+                                />
+                                <path
+                                    class="cls-1"
+                                    d="M604.283,480.612c0-14.511,10.109-25.033,24.895-25.033,14.3,0,24.827,10.109,24.827,25.033,0,14.855-10.523,25.033-24.827,25.033C614.392,505.645,604.283,495.122,604.283,480.612Zm39.612,0c0-9.216-6.327-15.955-14.717-15.955-8.8,0-14.854,7.084-14.854,15.955s6.052,15.955,14.854,15.955C637.568,496.567,643.9,489.827,643.9,480.612Z"
+                                    transform="translate(-264.755 -263.267)"
+                                />
+                                <path class="cls-1" d="M657.512,456.2h9.7L682.2,483.982h.138L697.331,456.2h9.7v48.828H697.4V474.835h-.138l-11.9,20.975h-6.259l-11.828-21.044h-.138v30.26h-9.628Z" transform="translate(-264.755 -263.267)" />
+                                <path class="cls-1" d="M712.53,456.2h18.087c11.829,0,16.986,6.877,16.986,16.23,0,10.729-7.22,15.886-17.949,15.886H722.09v16.712h-9.56Zm16.093,23.588c6.052,0,8.94-3.025,8.94-7.5,0-4.538-2.888-7.5-8.459-7.5H722.09v14.992Z" transform="translate(-264.755 -263.267)" />
+                                <path class="cls-1" d="M759.914,456.2h9.353l18.156,48.828h-10.11l-3.369-9.766H755.238l-3.3,9.766h-10.11Zm11.279,30.81-6.533-19.119h-.138l-6.533,19.119Z" transform="translate(-264.755 -263.267)" />
+                                <path class="cls-1" d="M788.592,456.2h9.49l21.938,32.941h.138V456.2h9.559v48.828h-9.7l-21.663-32.254h-.138v32.254h-9.627Z" transform="translate(-264.755 -263.267)" />
+                                <path class="cls-1" d="M846.635,483.569,830.474,456.2h11.073l9.971,17.743h.138l9.765-17.743h11.21L856.4,483.569v21.457h-9.766Z" transform="translate(-264.755 -263.267)" />
+                                <path
+                                    class="cls-1"
+                                    d="M883.91,480.68c0-14.3,9.216-25.1,24.482-25.1a26.352,26.352,0,0,1,19.394,8.321l-6.809,5.915a17.321,17.321,0,0,0-12.585-5.089c-8.046,0-14.373,5.983-14.373,15.954,0,9.01,5.64,16.024,14.786,16.024a18.126,18.126,0,0,0,9.834-2.819v-7.152H907.705v-8.322h20.356v21.044c-4.47,3.577-11.76,6.052-19.256,6.052C894.707,505.507,883.91,496.361,883.91,480.68Z"
+                                    transform="translate(-264.755 -263.267)"
+                                />
+                                <path
+                                    class="cls-1"
+                                    d="M932.326,456.2h18.5c11.76,0,16.986,6.877,16.986,16.23,0,7.427-3.438,12.517-10.179,14.717l12.243,17.881H958.39l-10.934-16.712h-5.571v16.712h-9.559ZM948.9,479.786c5.914,0,8.941-3.025,8.941-7.5,0-4.538-2.958-7.5-8.529-7.5h-7.427v14.992Z"
+                                    transform="translate(-264.755 -263.267)"
+                                />
+                                <path
+                                    class="cls-1"
+                                    d="M968.57,480.612c0-14.511,10.109-25.033,24.9-25.033,14.3,0,24.826,10.109,24.826,25.033,0,14.855-10.523,25.033-24.826,25.033C978.679,505.645,968.57,495.122,968.57,480.612Zm39.612,0c0-9.216-6.327-15.955-14.716-15.955-8.8,0-14.855,7.084-14.855,15.955s6.052,15.955,14.855,15.955C1001.855,496.567,1008.182,489.827,1008.182,480.612Z"
+                                    transform="translate(-264.755 -263.267)"
+                                />
+                                <path
+                                    class="cls-1"
+                                    d="M1021.112,484.807V456.2h9.7v27.99c0,7.014,3.576,12.379,10.041,12.379,5.914,0,10.178-4.608,10.178-12.379V456.2h9.7v28.609c0,12.723-7.358,20.838-19.875,20.838C1029.09,505.645,1021.112,498.149,1021.112,484.807Z"
+                                    transform="translate(-264.755 -263.267)"
+                                />
+                                <path class="cls-1" d="M1065.47,456.2h18.087c11.828,0,16.987,6.877,16.987,16.23,0,10.729-7.221,15.886-17.95,15.886h-7.565v16.712h-9.559Zm16.092,23.588c6.053,0,8.941-3.025,8.941-7.5,0-4.538-2.888-7.5-8.459-7.5h-7.015v14.992Z" transform="translate(-264.755 -263.267)" />
+                                <path
+                                    class="cls-1"
+                                    d="M812.53,332.945v25.394H845.9v21.827a55.3,55.3,0,0,1-30.012,8.6c-27.912,0-45.122-21.406-45.122-48.9,0-30.432,19.308-48.691,43.863-48.691,15.254,0,27.406,5.471,36.464,13.687l19.737-19.315c-15.19-14.913-36.34-22.285-56.2-22.285-46.591,0-74.714,32.951-74.714,76.6-2.1,14.327-2.607,16.054-12.007,28.961h0c-9.025,11.123-22.037,18.888-37.567,18.888-26.653,0-45.122-19.938-45.122-47.64,0-29.8,19.308-48.691,44.7-48.691,14.572,0,26.671,6.466,36.126,17.212l20.372-19.936a76.11,76.11,0,0,0-56.5-25.4c-1.292,0-2.562.037-3.824.086l.144-.086H488.722V289.5h56.435v128.06l29.478-28.676V289.5H630.8c-10.748,13.488-16.437,31.155-16.437,50.58,0,49.11,34.419,75.553,75.973,75.553a74.5,74.5,0,0,0,59.184-28.123l-.231-.2q1.471-1.579,2.824-3.211c13.359,20.34,36.54,31.534,63.77,31.534a108.51,108.51,0,0,0,24.662-2.881l34.1-32.949V332.945Z"
+                                    transform="translate(-264.755 -263.267)"
+                                />
+                            </svg>
+                        </a>
+                    </h1>
+                    <nav class="gnb">
+                        <div class="menu_btn">
+                            <p>Menu</p>
+                            <button class="ham">
+                                <span class="bars bars-1"></span>
+                                <span class="bars bars-2"></span>
+                                <span class="bars bars-3"></span>
+                            </button>
+                        </div>
+
+                        <div class="menu_link">
+                            <ul>
+                                <li><a href="/">메뉴1</a></li>
+                                <li><a href="/">메뉴2</a></li>
+                                <li><a href="/">메뉴3</a></li>
+                                <li><a href="/">메뉴4</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <section class="section1 parallax-item" id="parallax">
+                <div class="contents">
+                    <h2>
+                        <span>T</span>
+                        <span>C</span>
+                        <span>G</span> &nbsp;<br class="br_block">
+                        <span>D</span>
+                        <span>E</span>
+                        <span>S</span>
+                        <span>I</span>
+                        <span>G</span>
+                        <span>N</span>
+                    </h2>
+                    <div class="scroll_ani">
+                        <div class="icon">
+                            <span class="arrow a1"></span>
+                            <span class="arrow a2"></span>
+                            <span class="arrow a3"></span>
+                        </div>
+                        <span>SCROLL DOWN</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section2 parallax-item">
+                <div class="inner">
+                    <div class="contents">
+                        <div class="text_area1">
+                            <div class="txt1" data-aos="fade-right"><span class="gradient_txt">쇼핑몰 제작</span> <br class="br_block">막막하셨나요?</div>
+                            <div class="txt2" data-aos="fade-right"data-aos-delay="300">TCG 디자인이 <br class="br_block">풀어드립니다.</div>
+                        </div>
+
+                        <div class="text_area2">
+                            <div class="txt1" data-aos="fade-left"data-aos-delay="300">쇼핑몰 론칭 <br class="br_block">A부터 Z까지 -</div>
+                            <div class="txt2" data-aos="fade-left"data-aos-delay="200">
+                                고객님은 비즈니스만 신경쓰세요. <br class="br_block">나머지는 저희가 다 해드립니다.<br />
+                                고객님의 새로운 성공의 출발을 <br class="br_block">TCG 디자인과 함께 시작해보세요.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section3 parallax-item">
+                <div class="contents">
+                    <div class="text_area" data-aos="fade-up"data-aos-delay="300">
+                        TCG 디자인은 <br class="br_none"><br class="br_block">카페24 <br class="br_block">솔루션 기반으로 <br class="br_block">쇼핑몰을 <br class="br_block">구축합니다.
+                    </div>
+                    <ul class="img_area" data-aos="zoom-in"data-aos-delay="500">
+                        <li><img src="https://img.echosting.cafe24.com/ec/shop_kr/v2/main/img_mainVisual_theme4_obj1.webp" /></li>
+                        <li><img src="https://img.echosting.cafe24.com/ec/shop_kr/v2/main/img_mainVisual_theme4_obj2.webp" /></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section4 parallax-item">
+                <div class="inner">
+                    <div class="contents">
+                        <div class="img_wrap"data-aos="fade-right"data-aos-delay="300"></div>
+                        <div class="text_wrap">
+                            <div class="text_area1">
+                                <div class="txt1" data-aos="fade-left"data-aos-delay="300">
+                                    <span class="gradient_txt">온라인 쇼핑몰 <br class="br_block_mo">고수</span>
+                                </div>
+                                <div class="txt2" data-aos="fade-left"data-aos-delay="300">TCG 디자인은 <br class="br_block_mo">압니다.</div>
+                            </div>
+                            <div class="text_area2" data-aos="fade-left"data-aos-delay="300">
+                                우리는 카페24에서 다수의 쇼핑몰을 운영 중이기에<br class="br_none_mo">
+                                처음 쇼핑몰을 론칭하는 고객님의 마음을 잘 알고 있습니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section5">
+                <div class="contents">
+                    <div class="text_area">
+                        <div class="txt1" data-aos="fade-up">카페24 <br class="br_block_mo">관리자 설정부터 <br class="br_block">쇼핑몰 제작까지</div>
+                        <div class="txt2" data-aos="fade-up"data-aos-delay="300">모든 프로세스 <br class="br_block_mo">메뉴얼을 <br class="br_block">제공합니다.</div>
+                    </div>
+                    <ul class="img_area" data-aos="zoom-in"data-aos-delay="500">
+                        <li><img src="img/section5.png" /></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section6 parallax-item">
+                <div class="inner">
+                    <div class="contents">
+                        <div class="img_wrap"data-aos="fade-left"data-aos-delay="300"></div>
+                        <div class="text_wrap">
+                            <div class="text_area1">
+                                <div class="txt1" data-aos="fade-right"data-aos-delay="300">
+                                    <span class="gradient_txt">디자인스킨 세팅</span>
+                                </div>
+                                <div class="txt2" data-aos="fade-right"data-aos-delay="300">무제한 수정 가능합니다.</div>
+                            </div>
+                            <div class="text_area2" data-aos="fade-right"data-aos-delay="300">
+                                쇼핑몰 운영이 처음이거나 웹 제작 개발 언어를 모르시다면<br class="br_none_mo" />
+                                고객님이 디자인 스킨을 직접 수정하기는 어려우실 겁니다.<br class="br_none_mo" />
+                                저희는 쇼핑몰 론칭 전까지 추가 비용 없이 무제한 수정해 드립니다.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section7">
+                <div class="contents">
+                    <div class="text_area" data-aos="fade-up"data-aos-delay="300">
+                        단순히 쇼핑몰 <br class="br_block_mo">껍데기만 <br class="br_block_mo">만드는 게 아니라 <br class="br_none"><br class="br_block_mo"><br class="br_block_mo">
+                        쇼핑몰 론칭까지 TCG 디자인이 <br class="br_none">
+                        함께 동행하겠습니다
+                    </div>
+                </div>
+            </section>
+
+            <section class="section8">
+                <div class="contents">
+                    <div class="section_marquee">
+                        <ul class="marquee_text">
+                            <li class="marquee_left">TCG DESIGN TCG DESIGN TCG DESIGN TCG DESIGN TCG DESIGN TCG DESIGN TCG DESIGN TCG DESIGN TCG DESIGN</li>
+                            <li class="marquee_right">TCG DESIGN TCG DESIGN TCG DESIGN TCG DESIGN TCG DESIGN TCG DESIGN TCG DESIGN TCG DESIGN TCG DESIGN</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- 문의하기 영역 -->
+            <section class="section9">
+                <div class="inner">
+                    <div class="contents">
+                        <ul class="text_wrap">
+                            <li class="text_area">
+                                TCG와 함께<br />
+                                성공을 <br class="br_block">시작하세요
+                            </li>
+                            <li class="contact_btn">
+                                <a href="#" class="link">
+                                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="link__svg" aria-labelledby="link1-title link1-desc">
+                                        <title id="link1-title">Come quick and click this</title>
+                                        <desc id="link1-desc">A rotating link with text placed around a circle with an arrow inside</desc>
+                                        <path id="link-circle" class="link__path" d="M 20, 100 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" stroke="none" fill="none" />
+                                        <path class="link__arrow" d="M 75 100 L 125 100 L 110 85 M 125 100 L 110 115" fill="none" />
+                                        <text class="link__text">
+                                            <textPath href="#link-circle" stroke="none">Come quick and click this</textPath>
+                                        </text>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- 푸터영역 -->
+            <footer>
+                <div id="footer">
+                    <ul class="info">
+                        <li><span>Company.</span> (주)테헤란컴퍼니그룹</li>
+                        <li><span>Ceo.</span> 전효백</li>
+                        <li><span>Tel.</span> 010-1234-5678</li>
+                        <li><span>Mail.</span> teheranco@naver.com</li>
+                    </ul>
+                    <div class="copyright">Copyrightⓒ 2024 TEHERAN COMPANY GROUP. All rights reserved.</div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
